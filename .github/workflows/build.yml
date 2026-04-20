@@ -1,8 +1,9 @@
- name: build-and-push
+name: build-and-push
 
-  on:
+  "on":
     push:
-      branches: [ "main" ]
+      branches:
+        - main
 
   permissions:
     contents: read
@@ -28,3 +29,4 @@
             context: .
             push: true
             tags: ghcr.io/${{ github.repository_owner }}/b2b-ollama-qwen30b:latest
+
